@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.png" type="">
+
+    <title>Admin Fresh</title>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+
+    
+    <style>
+        body{
+            font-family: 'Montserrat', sans-serif;
+            color: black;
+            background-color: rgb(240, 240, 240);
+        }
+    </style>
+</head>
+<body>
+    <div class="addProPa">
+        <div class="container text-center">
+            <div class="row row-cols-auto">
+            <div class="col"><a class="formDash" href="AdminPage.html" style="cursor: pointer;">DashBoard</a></div>
+            <div class="col"><a style="font-family: 'Dancing Script', cursive; font-weight: bold; font-size: 25px; color: #ffffff; cursor: default;">Fresh</a></div>
+            <div class="col"><a class="formPro" href="EditProducts.html" style="cursor: pointer;">Products</a></div>
+            </div>
+        </div>  
+        <form class="Addform">
+            <h3>Add Product</h3>
+            <br>
+            <h6>Product Name</h6>
+            <input style="border: none; border-radius: 10px; height: 30px;">
+            <h6 style="padding-top: 10px;"> Description</h6>
+            <textarea rows="3" style="height: 190px; border: none; border-radius: 10px; width: 280px;"></textarea>
+            <h6>Category</h6>
+            <select style="border: none; border-radius: 10px; width: 280px; height: 30px;">
+                <option>Electronics</option>
+                <option>Food</option>
+                <option>Beauty & Personal Care</option>
+                <option>Beverages</option>
+                <option>Vegetables</option>
+            </select>
+            <div style="padding-top: 10px;">
+            <h6>Units In Stock</h6>
+            <input style="border: none; border-radius: 10px; height: 40px; width:150px" type="number"> </div>
+            <div style="display: flex; flex-direction: row;">
+                <form action="#" style="display: flex; flex-direction: row;">
+                    <input type="file" name="filename" style="padding-top: 10px;">
+                </form>
+                <a href="EditProducts.html" onclick="AddProduct()"><button type="button">Submit</button></a>
+            </div>
+        </form>
+    </div>    
+    <script>
+        function AddProduct() {
+            alert("Product is added succesfully");
+        }
+    </script>
+</body>
+</html>

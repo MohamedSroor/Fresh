@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.png" type="">
+    
+    <title>Fresh</title>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<style>
+ body {
+	background: #f6f5f7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Montserrat', sans-serif;
+	height: 90vh;
+}
+
+</style>    
+<body> 
+	<div class="Login">
+		<div class="container" id="container">
+			<div class="form-container sign-in-container">
+				<form action="AdminPage.html">
+					<h1>Sign In</h1>
+					<br> 	
+					<input type="text" placeholder="User Name" id="Un" required/>
+					<input type="password" placeholder="Password" required/>
+					<button onclick="Submit()">Sign In</button>
+				</form>
+			</div>
+			<div class="overlay-container">
+				<div class="overlay">
+					<div class="overlay-panel overlay-right">
+						<h1 style="font-size: 22px;">Welcome Back Our Partner!</h1>
+						<br><br>
+						<a href="LoginAsCustomer.html" style="color: white;"><button class="ghost" id="signIn">Sign In As Customer</button></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>		
+</body>
+</html>

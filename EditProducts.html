@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.png" type="">
+
+    <title>Admin Fresh</title>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+
+
+    <style>
+        body{
+            font-family: 'Montserrat', sans-serif;
+            color: black;
+            background-color: rgb(240, 240, 240);
+        }
+    </style>
+</head>
+<body>
+    <div class="admin">
+        <div class="container text-center">
+            <div class="row row-cols-auto">
+                <div class="col"><a class="formDash" href="AdminPage.html" style="cursor: pointer;">DashBoard</a></div>
+                <div class="col"><form class="formAdd" action="#" style="font-family: 'Dancing Script', cursive; font-weight: bold; font-size: 25px; color: #ffffff; cursor: default;">Fresh</form></div>
+                <div class="col"><a class="formPro active" href="EditProducts.html" style="cursor: pointer;">Products</a></div>
+            </div>
+        </div>
+        <br><br><br>
+        <div class="editProPa">
+            <div class="vertical-menu" style="margin-left: 100px; width: 50%;">
+                <div class="grid text-center" style="--bs-columns: 18; --bs-gap: .5rem;">
+                    <div style="grid-column: span 14; border: none;">
+                        <div style="display:flex; padding-top: 10px;">
+                            <h6 class="dropdown-header" style="padding-left: 20px;">Product Name</h6>
+                            <h6 class="dropdown-header" style="padding-left: 300px;">Solid</h6>
+                            <h6 class="dropdown-header" style="padding-left: 20px;">In Stock</h6>
+                        </div>
+                            <hr>
+                            <div style="display: flex;" id="item1">
+                                <a class="dropdown-item" href="#">Sharp Nofrost Digital Inverter- 480 L</a>
+                                <a class="dropdown-item" href="#" style="cursor: default; padding-left: 135px; padding-right: 40px; width: 120px;">2121</a>
+                                <a class="dropdown-item" href="#" style="cursor: default; padding-left: 45px;">1876</a>
+                                <a class="dropdown-item" href="#"><img src="images/icons8-recycle-bin-20.png" onclick="remove1()" style="padding: 3px; border: none; border-radius: 20px; background-color: #ca992e;"></a>
+                            </div>
+                            <div style="display: flex;background-color: #6c757d;" id="item2">
+                                <a class="dropdown-item" href="#">Fresh 3D Heater - 5 Candles - 2000Watt</a>
+                                <a class="dropdown-item" href="#" style="cursor: default; padding-left: 110px; padding-right: 40px; width: 120px;">1810</a>
+                                <a class="dropdown-item" href="#" style="cursor: default;padding-left: 45px;">1243</a>
+                                <a class="dropdown-item" href="#" onclick="remove2()"><img src="images/icons8-recycle-bin-20.png" style="padding: 3px; border: none; border-radius: 20px; background-color: #ca992e;"></a>
+                            </div>
+                            <div style="display: flex;background-color: #6c757d;" id="item3">
+                                <a class="dropdown-item" href="#">Mienta Turkish Coffee Maker - 5 Cups </a>
+                                <a class="dropdown-item" href="#" style="cursor: default; padding-left: 130px; padding-right: 40px; width: 120px;">1204</a>
+                                <a class="dropdown-item" href="#" style="cursor: default; padding-left: 45px;">1876</a>
+                                <a class="dropdown-item" href="#" onclick="remove3()"><img src="images/icons8-recycle-bin-20.png" style="padding: 3px; border: none; border-radius: 20px; background-color: #ca992e;"></a>
+                            </div>
+                            <div style="display: flex;background-color: #6c757d;" id="item4">
+                                <a class="dropdown-item" href="#">Mitco Oriental Sausage - 900g</a>
+                                <a class="dropdown-item" href="#" style="cursor: default; padding-left: 185px; padding-right: 40px; width: 120px;">1014</a>
+                                <a class="dropdown-item" href="#" style="cursor: default; background-color: rgb(255, 0, 0);padding-left: 45px;">0</a>
+                                <a class="dropdown-item" href="#" onclick="remove4()"><img src="images/icons8-recycle-bin-20.png" style="padding: 3px; border: none; border-radius: 20px; background-color: #ca992e;"></a>
+                            </div>
+                            <div style="display: flex;background-color: #6c757d;" id="item5">
+                                <a class="dropdown-item" href="#">Juhayna Full Cream Milk 1.5 L</a>
+                                <a class="dropdown-item" href="#" style="cursor: default; padding-left: 195px; padding-right: 40px; width: 120px;">1752</a>
+                                <a class="dropdown-item" href="#" style="cursor: default;padding-left: 45px;">945</a>
+                                <a class="dropdown-item" href="#" onclick="remove5()"><img src="images/icons8-recycle-bin-20.png" style="padding: 3px; border: none; border-radius: 20px; background-color: #ca992e;"></a>
+                            </div>
+                            <div style="display: flex;background-color: #6c757d;" id="item6">
+                                <a class="dropdown-item" href="#">Domty Istanbolly Cheese - 500g</a>
+                                <a class="dropdown-item" href="#" style="cursor: default; padding-left: 175px; padding-right: 40px; width: 120px;">154</a>
+                                <a class="dropdown-item" href="#" style="cursor: default;padding-left: 40px;">2047</a>
+                                <a class="dropdown-item" href="#" onclick="remove6()"><img src="images/icons8-recycle-bin-20.png" style="padding: 3px; border: none; border-radius: 20px; background-color: #ca992e;"></a>
+                            </div>
+                            <div style="display: flex;background-color: #6c757d;" id="item7">
+                                <a class="dropdown-item" href="#">Jacomo For Her Eau De Parfum With A Mirror</a>
+                                <a class="dropdown-item" href="#" style="cursor: default; padding-left: 60px; padding-right: 40px; width: 120px;">1164</a>
+                                <a class="dropdown-item" href="#" style="cursor: default;padding-left: 25px;">1045</a>
+                                <a class="dropdown-item" href="#" onclick="remove7()"><img src="images/icons8-recycle-bin-20.png" style="padding: 3px; border: none; border-radius: 20px; background-color: #ca992e;"></a>
+                            </div>
+                            <div style="display: flex;background-color: #6c757d;" id="item8">
+                                <a class="dropdown-item" href="#">Schweppes Pineapple Malt Drink - 1L</a>
+                                <a class="dropdown-item" href="#" style="cursor: default; padding-left: 130px; padding-right: 40px; width: 120px;">3484</a>
+                                <a class="dropdown-item" href="#" style="cursor: default;padding-left: 45px;">2345</a>
+                                <a class="dropdown-item" href="#" onclick="remove8()"><img src="images/icons8-recycle-bin-20.png" style="padding: 3px; border: none; border-radius: 20px; background-color: #ca992e;"></a>
+                            </div>
+                            <div style="display: flex;background-color: #6c757d;" id="item9">
+                                <a class="dropdown-item" href="#">Ahmed Tea English Breakfast Tea - 100 Bags</a>
+                                <a class="dropdown-item" href="#" style="cursor: default; padding-left: 75px; padding-right: 40px; width: 120px;">1548</a>
+                                <a class="dropdown-item" href="#" style="cursor: default;padding-left: 40px;background-color: rgba(255, 0, 0, 0.377);">201</a>
+                                <a class="dropdown-item" href="#" onclick="remove9()"><img src="images/icons8-recycle-bin-20.png" style="padding: 3px; border: none; border-radius: 20px; background-color: #ca992e;"></a>
+                            </div>
+                            <div style="display: flex;background-color: #6c757d;" id="item10">
+                                <a class="dropdown-item" href="#">Abu Auf Light Roasted Blended Turkish Coffee - 250g</a>
+                                <a class="dropdown-item" href="#" style="cursor: default; padding-right: 20px; width: 120px;">2121</a>
+                                <a class="dropdown-item" href="#" style="cursor: default;padding-left: 20px;">1876</a>
+                                <a class="dropdown-item" href="#" onclick="remove10()"><img src="images/icons8-recycle-bin-20.png" style="padding: 3px; border: none; border-radius: 20px; background-color: #ca992e;"></a>
+                            </div>
+                            <div style="display: flex;" id="item11">
+                                <a class="dropdown-item" href="#" style="border-bottom-left-radius: 20px;">Hawaa Elbow Pasta -1k</a>
+                                <a class="dropdown-item" href="#" style="cursor: default; padding-left: 245px; padding-right: 40px; width: 120px;">2121</a>
+                                <a class="dropdown-item" href="#" style="cursor: default;padding-left: 45px;">1876</a>
+                                <a class="dropdown-item" href="#" style="border-bottom-right-radius: 20px;" onclick="remove11()"><img src="images/icons8-recycle-bin-20.png" style="padding: 3px; border: none; border-radius: 20px; background-color: #ca992e;"></a>
+                            </div>  
+                            
+                    </div>
+                </div>
+            </div>
+   
+            <div class="modifyPro">
+                <form action="AddProduct.html"><button class="addPro">Add Product</button></form>
+                <button class="editPro">Edit Product</button>
+            </div> 
+        </div>     
+   
+    <script>
+        function removeI1() {
+            document.getElementById("item1").style.display = "none";  
+        }
+
+        function removeI2() {
+            document.getElementById("item2").style.display = "none";  
+        }
+
+        function removeI3() {
+            document.getElementById("item3").style.display = "none";  
+        }
+
+        function removeI4() {
+            document.getElementById("item4").style.display = "none";  
+        }
+
+        function removeI5() {
+            document.getElementById("item5").style.display = "none";  
+        }
+
+        function removeI6() {
+            document.getElementById("item6").style.display = "none";  
+        }
+
+        function removeI7() {
+            document.getElementById("item7").style.display = "none";  
+        }
+
+        function removeI8() {
+            document.getElementById("item8").style.display = "none";  
+        }
+
+        function removeI9() {
+            document.getElementById("item9").style.display = "none";  
+        }
+
+        function removeI10() {
+            document.getElementById("item10").style.display = "none";  
+        }
+
+        function removeI11() {
+            document.getElementById("item11").style.display = "none";  
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title> Fresh </title>
+
+  <link rel="shortcut icon" href="images/favicon.png" type="">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+
+  <style>
+    body{
+    background: #f6f5f7;
+    min-height: 100vh;
+    vertical-align: middle;
+    display: flex;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+    }
+    .title{
+        margin-bottom: 5vh;
+    }
+    .card{
+        margin: auto;
+        max-width: 950px;
+        width: 90%;
+        box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 1rem;
+        border: transparent;
+    }
+    .cart{
+        background-color: #fff;
+        padding: 4vh 5vh;
+        border-bottom-left-radius: 1rem;
+        border-top-left-radius: 1rem;
+    }
+    .summary{
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        background: linear-gradient(to right, #353535, #111111);
+        color: #eee;
+    }
+    .summary .col-2{
+        padding: 0;
+    }
+    .summary .col-10
+    {
+        padding: 0;
+    }.row{
+        margin: 0;
+    }
+    .title b{
+        font-size: 1.5rem;
+    }
+    .main{
+        margin: 0;
+        padding: 2vh ;
+        width: 100%;
+    }
+    .col-2, .col{
+        padding: 0 1vh;
+    }
+    a{
+        padding: 0 1vh;
+        color: #111111;
+        cursor: pointer;
+    }
+    a:hover {
+      text-decoration: none;
+      opacity: 0.8;
+    }
+    .close{
+        margin-left: auto;
+        font-size: 0.7rem;
+        cursor: pointer;
+    }
+    img{
+        width: 3.5rem;
+    }
+    .back-to-shop{
+        margin-top: 4.5rem;
+    }
+    h5{
+        margin-top: 4vh;
+    }
+    form{
+        padding: 1vh 0;
+    }
+    select{
+        border: none;
+        border-radius: 20px;
+        padding: 1vh 1vh;
+        margin-bottom: 2.2vh;
+        outline: none;
+        width: 100%;
+        background-color: #eee;
+    }
+    input{
+        border: none;
+        border-radius: 20px;
+        padding: 1vh;
+        margin-bottom: 2.2vh;
+        outline: none;
+        width: 100%;
+        background-color: #eee;
+    }
+    input:focus::-webkit-input-placeholder
+    {
+          color:transparent;
+    }
+    .btn{
+        background-color: #ffbe33;
+        color: #FFFFFF;
+        width: 100%;
+        font-size: 0.7rem;
+        margin-top: 1px;
+        margin-bottom: 15px;
+        border-radius: 20px;
+        border: none;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 12px 45px;
+    }
+    .btn:hover{
+        opacity: 0.8;
+        color: #eee;
+    }
+    .back-to-shop a {
+      border-radius: 20px;
+      border: 1px solid #41c485;
+      background-color: #41c485;
+      color: #FFFFFF;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 12px 45px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="row">
+        <div class="col-md-8 cart">
+            <div class="title">
+                <div class="row">
+                    <div class="col"><h4><b>Shopping Cart</b></h4></div>
+                </div>
+            </div>    
+            <div class="row border-top border-bottom" id="item1">
+                <div class="row main align-items-center">
+                    <div class="col-2"><img class="img-fluid" src="images/tamr.webp"></div>
+                    <div class="col">
+                        <div class="row text-muted">Tamrtna</div>
+                        <div class="row">Tamrtna Packed Saidi Dates - 500g</div>
+                    </div>
+                    <div class="col">
+                        <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
+                    </div>
+                    <div class="col">24.75 EGP <span class="close" onclick="removeI1()">&#10005;</span></div>
+                </div>
+            </div>
+            <div class="row border-top border-bottom" id="item2">
+                <div class="row main align-items-center">
+                    <div class="col-2"><img class="img-fluid" src="images/fresh heater.webp"></div>
+                    <div class="col">
+                        <div class="row text-muted">Fresh 3D Heater</div>
+                        <div class="row">Fresh 3D Heater - 5 Candles - 2000Watt</div>
+                    </div>
+                    <div class="col">
+                        <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
+                    </div>
+                    <div class="col">950 EGP<span class="close" onclick="removeI2()">&#10005;</span></div>
+                </div>
+            </div>
+            <div class="row border-top border-bottom" id="item3">
+                <div class="row main align-items-center">
+                    <div class="col-2"><img class="img-fluid" src="images/sharp nofrost.webp"></div>
+                    <div class="col">
+                        <div class="row text-muted">Sharp Nofrost</div>
+                        <div class="row">Sharp Nofrost Digital Inverter Refrigerator - 480 L - Red - SJ-GV63G-RD</div>
+                    </div>
+                    <div class="col">
+                        <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
+                    </div>
+                    <div class="col">20800 EGP<span class="close" onclick="removeI3()">&#10005;</span></div>
+                </div>
+            </div>
+            <div class="back-to-shop"><a href="Our Products.html">&leftarrow; Back To Products</a></div>
+        </div>
+        <div class="col-md-4 summary">
+            <div><h5><b>Summary</b></h5></div>
+            <hr>
+            <div class="row">
+                <div class="col" style="padding-left:0;" id="NumItems">3 Items</div>
+                <div class="col text-right">21,774.75 EGP</div>
+            </div>
+            <form>
+                <p>Shipping</p>
+                <select><option class="text-muted">Standard Delivery 30.00 EGP</option>
+                </select>
+                <p>Enter Payment Method</p>
+                <select><option>Cash</option>
+                  <option>Credit Card</option>
+                </select>
+
+                <p>Enter Number Your Credit Card</p>
+                <input placeholder="Number Your Credit Card">
+                <p>Your Location</p>
+                <input value="130 St. Elharam - Giza - Egypt">
+                <p>Your Phone Number</p>
+                <input value="+20 01007992894">
+            </form>
+            <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+                <div class="col">Total Price</div>
+                <div class="col text-right">21,804.75 EGP</div>
+            </div>
+            <form action="Our Products.html"><button class="btn" onclick="checkout()">Checkout</button></form>
+        </div>
+    </div>  
+  </div>
+  <script src="js/custom.js"></script>
+</body>
+</html>
